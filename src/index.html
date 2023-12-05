@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="../dist/output.css" />
+  </head>
+  <body>
+    <main id="app" class="font-asul">
+      <div class="w-[400px] mx-auto mt-10 px-5 pb-10 ">
+        <h1 class="text-4xl  font-bold text-neutral-700 mt-5 ">Todo App</h1>
+        <!-- Text Input  -->
+        <div class="flex items-center mt-5">
+          <input id="textInput"
+            class="w-14 h-14 px-3 text-xl border flex-grow border-neutral-700 focus-visible:outline-none"
+            type="text"
+          />
+          <button id="addBtn"
+            class="w-14 h-14 flex justify-center items-center text-white bg-neutral-700"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6 stroke-1"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 4.5v15m7.5-7.5h-15"
+              />
+            </svg>
+          </button>
+        </div>
+        <!-- List Total Show -->
+        <div class="flex justify-between items-center">
+          <h3 class="text-2xl text-neutral-700 font-semibold py-5 font-serif">My List</h3>
+          <div
+            class="bg-neutral-700 text-white  border rounded-full px-3 py-2"
+          >
+            Done(<span class="doneCount">0</span> / <span class="totalCount">0</span>)
+          </div>
+        </div>
+        <!-- Show Data  -->
+        <div class="listGroup">
+          <div
+            class="py-10 hidden flex-col last:flex justify-center items-center"
+          >
+            <img width="150px" src="./img/empty.svg" alt="empty" />
+            <p class="text-sm font-medium text-neutral-500">
+              There is no list...
+            </p>
+          </div>
+          <!-- <div class="flex justify-end items-end">
+         <button class="bg-neutral-300 hover:bg-neutral-500 text-slate-100 px-3 font-semibold text-xl py-2 rounded-full">Delete All</button>
+          </div> -->
+         
+        </div>
+      </div>
+    </main>
+    <script src="js/app.js"></script>
+  </body>
+</html>
